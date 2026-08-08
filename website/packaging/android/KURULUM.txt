@@ -1,0 +1,10 @@
+WhiteCore AI — Android
+======================
+
+Resmi APK henüz yok (planlanan). Bu paket PWA / köprü kurulumudur.
+
+1. Windows'ta Jarvis'i açın.
+2. Telefonda Chrome ile http://PC-IP:8741/ açın.
+3. Menü → Ana ekrana ekle / Uygulamayı yükle.
+
+İleride APK aynı köprü sözleşmesiyle yayınlanacak.

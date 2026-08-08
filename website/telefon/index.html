@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="JARVIS" />
+  <meta name="theme-color" content="#050A0C" />
+  <title>J.A.R.V.I.S. Telefon</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <h1>J.A.R.V.I.S.</h1>
+        <p>Telefon istemci · API key gerekmez</p>
+      </div>
+      <div id="rozet" class="rozet offline">○ OFFLINE</div>
+    </header>
+
+    <section id="ekran-baglan" class="kart">
+      <h2>PC’ye bağlan</h2>
+      <p class="ipucu">Jarvis PC’de açık olmalı. Karekodu okutun veya IP + 6 haneli kodu girin.</p>
+      <label>PC adresi (LAN IP)</label>
+      <input id="pc-host" inputmode="decimal" placeholder="192.168.1.5" autocomplete="off" />
+      <label>Kod</label>
+      <input id="kod" inputmode="numeric" maxlength="8" placeholder="123456" autocomplete="one-time-code" />
+      <label>Cihaz adı</label>
+      <input id="ad" placeholder="iPhone" value="iPhone" />
+      <button id="btn-baglan" class="ana">Bağlan</button>
+      <p id="hata" class="hata"></p>
+      <p class="ipucu"><a href="../" style="color:#00a894">← İndirme sitesi</a></p>
+    </section>
+
+    <section id="ekran-sohbet" class="kart gizli">
+      <div class="ust-satir">
+        <h2>Sohbet</h2>
+        <button id="btn-kop" class="ikincil">Kop</button>
+      </div>
+      <div id="mesajlar" class="mesajlar"></div>
+      <div class="giris-satir">
+        <input id="mesaj" placeholder="Jarvis’e yaz…" />
+        <button id="btn-gonder" class="ana">Gönder</button>
+      </div>
+    </section>
+
+    <footer>
+      <span id="durum-metin">Hazır</span>
+      <span>WhiteCore · Phone</span>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

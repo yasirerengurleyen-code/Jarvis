@@ -1,0 +1,45 @@
+# WhiteCore AI – bağımlılıklar
+# Python 3.10+ önerilir
+#
+# Aşama 1 (çekirdek): standart kütüphane yeterlidir.
+#   python main.py --demo
+#
+# Aşağıdaki paketler sonraki aşamalar (GUI / ses / vision / ağ) içindir.
+# İsteğe bağlı kurulum: pip install -r requirements.txt
+
+# --- Arayüz (Aşama 4) ---
+PySide6>=6.6.0
+
+# --- Yapay zeka sağlayıcıları (Aşama 2) ---
+# openai>=1.40.0
+# httpx>=0.27.0
+
+# --- Ses (Aşama 3) ---
+# faster-whisper>=1.0.0
+# openai-whisper>=20231117
+# piper-tts
+# TTS
+
+# --- Görüntü / OCR / PDF ---
+# opencv-python>=4.9.0
+# Pillow>=10.0.0
+# pytesseract>=0.3.10
+PyPDF2>=3.0.0
+
+# --- Sistem / otomasyon ---
+psutil>=5.9.0
+# pyautogui>=0.9.54
+# watchdog>=4.0.0
+# requests>=2.31.0
+# beautifulsoup4>=4.12.0
+
+# --- Ağ / cihaz bağlantısı ---
+# websockets>=12.0
+# qrcode>=7.4.0
+
+# --- Bilimsel ---
+# numpy>=1.26.0
+
+# --- Geliştirme / test ---
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

@@ -1,0 +1,16 @@
+WhiteCore AI — iPhone (iOS)
+==========================
+
+Native App Store sürümü yok. Telefon istemcisi Safari PWA'dır.
+
+Kurulum:
+1. Windows'ta Jarvis'i açın (python main.py --gui).
+2. KAREKOD veya eşleştirme kodunu üretin.
+3. iPhone'da Safari ile aynı Wi‑Fi'de karekodu okutun
+   veya http://PC-IP:8741/ adresini açın.
+4. Paylaş → Ana Ekrana Ekle (isteğe bağlı).
+
+API key telefona girilmez; PC'deki .env kullanılır.
+
+Dosyalar:
+  - safari-kisayol.html  → favorilere eklemek için

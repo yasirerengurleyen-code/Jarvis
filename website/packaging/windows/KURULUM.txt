@@ -1,0 +1,14 @@
+WhiteCore AI — Windows Portable
+================================
+
+1. Bu ZIP'i bir klasöre çıkarın.
+2. Proje kökünde Python 3.11+ ve .venv kurulu olmalı.
+3. start-jarvis.bat dosyasını çalıştırın
+   veya:  python main.py --gui
+
+Gereksinimler:
+  - Windows 10/11
+  - Aynı ağda telefon paneli için: PC'de Jarvis açık olmalı
+  - Telefon: http://PC-IP:8741/
+
+Destek: WhiteCore AI / J.A.R.V.I.S.

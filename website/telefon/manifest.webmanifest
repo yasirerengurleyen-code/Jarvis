@@ -1,0 +1,9 @@
+{
+  "name": "J.A.R.V.I.S. Telefon",
+  "short_name": "JARVIS",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#050A0C",
+  "theme_color": "#050A0C",
+  "lang": "tr"
+}

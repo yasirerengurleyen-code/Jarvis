@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="WhiteCore AI — J.A.R.V.I.S. indir. Bilgisayar veya telefon." />
+  <title>WhiteCore AI — İndir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700;800&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="scan"></div>
+  </div>
+
+  <main class="hero">
+    <p class="brand">WhiteCore AI</p>
+    <h1 class="headline">J.A.R.V.I.S. seninle.</h1>
+    <p class="lede">Masaüstü asistanını kur veya telefonundan bağlan — API key telefona girilmez.</p>
+
+    <div class="cta" role="group" aria-label="Platform seç">
+      <button type="button" class="cta-btn" data-hedef="pc" id="btn-pc">
+        Bilgisayar
+      </button>
+      <button type="button" class="cta-btn" data-hedef="telefon" id="btn-telefon">
+        Telefon
+      </button>
+    </div>
+  </main>
+
+  <section id="panel-pc" class="panel" hidden>
+    <div class="panel-inner">
+      <button type="button" class="geri" data-geri>← Geri</button>
+      <h2>Bilgisayar</h2>
+      <p>Windows için taşınabilir paket veya kurulum dosyası.</p>
+      <div class="indir-satir">
+        <a class="indir" href="downloads/WhiteCoreAI-Windows-Portable.zip" download>
+          <span class="indir-ad">ZIP paket</span>
+          <span class="indir-meta">Portable · Windows</span>
+        </a>
+        <a class="indir" href="downloads/WhiteCoreAI-Setup.exe" download>
+          <span class="indir-ad">.EXE kurulum</span>
+          <span class="indir-meta">Kurulum sihirbazı · Windows</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="panel-telefon" class="panel" hidden>
+    <div class="panel-inner">
+      <button type="button" class="geri" data-geri>← Geri</button>
+      <h2>Telefon</h2>
+      <p>Önce telefonda Jarvis istemcisini aç, sonra istersen kurulum paketini indir.</p>
+      <div class="indir-satir">
+        <a class="indir indir-ana" href="telefon/">
+          <span class="indir-ad">Telefonda aç →</span>
+          <span class="indir-meta">Canlı bağlantı · iPhone / iPad / Android</span>
+        </a>
+        <a class="indir" href="downloads/WhiteCore-iOS.zip" download>
+          <span class="indir-ad">iPhone · iOS</span>
+          <span class="indir-meta">Safari kurulum paketi</span>
+        </a>
+        <a class="indir" href="downloads/WhiteCore-iPadOS.zip" download>
+          <span class="indir-ad">iPad · iPadOS</span>
+          <span class="indir-meta">Safari kurulum paketi</span>
+        </a>
+        <a class="indir" href="downloads/WhiteCore-Android.zip" download>
+          <span class="indir-ad">Android</span>
+          <span class="indir-meta">PWA / köprü paketi</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

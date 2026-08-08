@@ -1,0 +1,305 @@
+{
+  "project": {
+    "name": "WhiteCore AI",
+    "codename": "WhiteCoreAI",
+    "version": "0.1.0",
+    "environment": "development",
+    "locale": "tr_TR",
+    "timezone": "Europe/Istanbul",
+    "data_dir": "database",
+    "assets_dir": "assets",
+    "logs_dir": "logs"
+  },
+  "assistant": {
+    "name": "J.A.R.V.I.S.",
+    "display_name": "Jarvis",
+    "personality": "profesyonel, zarif, yardımcı, Tony Stark tarzı",
+    "language": "tr",
+    "greeting": "Sistemler çevrimiçi. Size nasıl yardımcı olabilirim?",
+    "farewell": "Sistemleri kapatıyorum. İyi günler.",
+    "require_wake_word": true
+  },
+  "ai": {
+    "default_provider": "openai",
+    "model": "gpt-4o-mini",
+    "temperature": 0.7,
+    "max_tokens": 2048,
+    "timeout_seconds": 60,
+    "system_prompt": "Sen WhiteCore AI ekosistemindeki J.A.R.V.I.S. asistanısın. Türkçe konuşursun, net ve profesyonel yardımcı olursun.",
+    "providers": {
+      "openai": {
+        "enabled": true,
+        "api_key_env": "OPENAI_API_KEY",
+        "base_url": "https://api.openai.com/v1",
+        "model": "gpt-4o-mini"
+      },
+      "ollama": {
+        "enabled": false,
+        "base_url": "http://127.0.0.1:11434",
+        "model": "llama3.2"
+      },
+      "gemini": {
+        "enabled": false,
+        "api_key_env": "GEMINI_API_KEY",
+        "model": "gemini-1.5-flash"
+      },
+      "claude": {
+        "enabled": false,
+        "api_key_env": "ANTHROPIC_API_KEY",
+        "model": "claude-3-5-sonnet-latest"
+      },
+      "deepseek": {
+        "enabled": false,
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "base_url": "https://api.deepseek.com",
+        "model": "deepseek-chat"
+      },
+      "openrouter": {
+        "enabled": false,
+        "api_key_env": "OPENROUTER_API_KEY",
+        "base_url": "https://openrouter.ai/api/v1",
+        "model": "openai/gpt-4o-mini"
+      },
+      "local": {
+        "enabled": false,
+        "base_url": "http://127.0.0.1:8080/v1",
+        "model": "local-model",
+        "api_key_env": "LOCAL_LLM_API_KEY"
+      }
+    }
+  },
+  "voice": {
+    "enabled": true,
+    "language": "tr",
+    "stt": {
+      "engine": "faster_whisper",
+      "fallback": "openai_whisper",
+      "model_size": "base",
+      "device": "cpu",
+      "compute_type": "int8",
+      "sample_rate": 16000
+    },
+    "tts": {
+      "engine": "piper",
+      "fallback": "coqui",
+      "voice": "tr_TR-dfki-medium",
+      "speed": 1.0,
+      "style": "robotic_natural"
+    },
+    "microphone": {
+      "device_index": null,
+      "channels": 1,
+      "sample_rate": 16000,
+      "chunk_size": 1024,
+      "energy_threshold": 300
+    },
+    "speaker": {
+      "device_index": null,
+      "volume": 0.85
+    },
+    "speaking": {
+      "tts_on_reply": true,
+      "barge_in": true,
+      "settings_while_speaking": true,
+      "voice_note_seconds": 5.0,
+      "voice_note_stt": true
+    }
+  },
+  "wake_word": {
+    "enabled": true,
+    "phrase": "Jarvis",
+    "sensitivity": 0.6,
+    "timeout_seconds": 8,
+    "cooldown_seconds": 1.5,
+    "require_confirmation": false
+  },
+  "gui": {
+    "framework": "PySide6",
+    "theme": "tony_stark",
+    "colors": {
+      "background": "#050A0C",
+      "surface": "#0B1518",
+      "glass": "rgba(8, 22, 28, 0.78)",
+      "accent": "#00E8C8",
+      "accent_dim": "#00A894",
+      "text": "#D8FFF6",
+      "danger": "#FF3B4A",
+      "warning": "#FFB020"
+    },
+    "effects": {
+      "glassmorphism": true,
+      "neon_glow": true,
+      "microphone_animation": true,
+      "ai_animation": true
+    },
+    "window": {
+      "width": 1280,
+      "height": 780,
+      "frameless": false,
+      "always_on_top": false,
+      "start_maximized": false,
+      "start_fullscreen": true
+    },
+    "widgets": {
+      "show_cpu": true,
+      "show_ram": true,
+      "show_gpu": false,
+      "show_disk": true,
+      "show_battery": true,
+      "show_network": true,
+      "show_clock": true,
+      "show_date": true,
+      "show_weather": true,
+      "show_system_info": false
+    },
+    "language": "tr"
+  },
+  "memory": {
+    "backend": "sqlite",
+    "database_path": "database/whitecore.db",
+    "store_conversations": true,
+    "store_preferences": true,
+    "long_term_enabled": true,
+    "max_short_term_messages": 50,
+    "user_profile": {
+      "learn_name": true,
+      "name": null
+    }
+  },
+  "security": {
+    "require_confirmation_for_dangerous": true,
+    "dangerous_actions": [
+      "file_delete",
+      "system_shutdown",
+      "system_restart",
+      "terminal_command",
+      "send_file",
+      "remote_control"
+    ],
+    "allow_terminal": true,
+    "sandbox_plugins": true,
+    "token_ttl_seconds": 86400,
+    "encrypt_tokens_at_rest": true
+  },
+  "logging": {
+    "level": "INFO",
+    "console": true,
+    "file": true,
+    "file_path": "logs/app.log",
+    "rotation": "daily",
+    "backup_count": 14,
+    "format": "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
+    "json_audit_path": "logs/audit.jsonl",
+    "colored_console": true
+  },
+  "network": {
+    "enabled": true,
+    "dry_run": false,
+    "host": "0.0.0.0",
+    "http_port": 8741,
+    "websocket_port": 8742,
+    "use_https": false,
+    "discovery": {
+      "enabled": true,
+      "mdns_service": "_whitecore._tcp.local.",
+      "broadcast_interval_seconds": 5
+    },
+    "pairing": {
+      "code_length": 6,
+      "qr_enabled": true,
+      "code_ttl_seconds": 300
+    }
+  },
+  "sync": {
+    "enabled": true,
+    "dry_run": false
+  },
+  "mobile": {
+    "enabled": true,
+    "bridge_enabled": true,
+    "dry_run": false,
+    "allow_remote_commands": false,
+    "max_devices": 5,
+    "primary_mobile": "ios",
+    "platforms": {
+      "windows": {
+        "role": "host",
+        "priority": 1,
+        "enabled": true
+      },
+      "ios": {
+        "role": "client",
+        "priority": 2,
+        "enabled": true
+      },
+      "ipados": {
+        "role": "client",
+        "priority": 3,
+        "enabled": false
+      },
+      "web": {
+        "role": "client",
+        "priority": 4,
+        "enabled": true
+      },
+      "android": {
+        "role": "client",
+        "priority": 99,
+        "enabled": false,
+        "deferred": true
+      }
+    },
+    "features": {
+      "qr_pairing": true,
+      "code_pairing": true,
+      "chat_sync": true,
+      "file_share": true,
+      "notifications": true,
+      "find_phone": true,
+      "battery_status": true,
+      "connection_status": true,
+      "multi_device": true
+    },
+    "commands": {
+      "pc_to_phone": [
+        "find_phone",
+        "battery_status",
+        "send_notification",
+        "open_camera",
+        "request_location"
+      ],
+      "phone_to_pc": [
+        "shutdown_pc",
+        "open_vscode",
+        "open_chrome",
+        "send_file",
+        "take_screenshot"
+      ]
+    }
+  },
+  "plugins": {
+    "enabled": true,
+    "directory": "plugins",
+    "autoload": true,
+    "allow_list": [],
+    "deny_list": []
+  },
+  "automation": {
+    "enabled": true,
+    "smart_agent": true,
+    "max_plan_steps": 12,
+    "confirm_multi_step": true,
+    "default_project_root": null
+  },
+  "vision": {
+    "enabled": true,
+    "dry_run": true,
+    "face": {
+      "enabled": false,
+      "camera_permission": false,
+      "local_only": true,
+      "storage_root": "database/faces",
+      "min_confidence": 0.55
+    }
+  }
+}

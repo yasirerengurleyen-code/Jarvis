@@ -1,0 +1,2 @@
+﻿# WhiteCore AI paketi: sync
+

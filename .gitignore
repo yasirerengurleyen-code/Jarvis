@@ -1,0 +1,68 @@
+# Sanal ortam
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Test / kapsama
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ortam ve gizli anahtarlar
+.env
+.env.*
+!.env.example
+config/secrets.json
+*.pem
+*.key
+
+# Veritabanı ve loglar
+database/*.db
+database/*.db-journal
+database/*.json
+database/voice_notes/
+logs/*.log
+logs/*.jsonl
+data/
+
+# İşletim sistemi
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ses / model önbellekleri
+assets/models/
+*.onnx
+*.bin
+*.pt
+*.gguf
+
+# Geçici dosyalar
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Website paketleme artıkları
+website/downloads/_pyi_*/
+website/downloads/_staging_*/

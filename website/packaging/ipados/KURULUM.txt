@@ -1,0 +1,9 @@
+WhiteCore AI — iPad (iPadOS)
+===========================
+
+1. Windows'ta Jarvis'i açın.
+2. KAREKOD üretin.
+3. iPad Safari ile okutun veya http://PC-IP:8741/ açın.
+4. Paylaş → Ana Ekrana Ekle.
+
+iPad için ek dosya: safari-kisayol.html
