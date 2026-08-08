@@ -82,8 +82,8 @@ python website/serve.py
 
 - Site: `http://127.0.0.1:8787/`
 - **Telefon linki:** `http://127.0.0.1:8787/telefon/`
-- GitHub Pages (yayınlandıktan sonra):  
-  `https://yasirerengurleyen-code.github.io/Jarvis/telefon/`
+- GitHub Pages telefon linki:  
+  https://yasirerengurleyen-code.github.io/Jarvis/telefon/
 
 Telefonda PC LAN IP + Jarvis’teki 6 haneli kod ile bağlanılır (API key telefona girilmez).
 
